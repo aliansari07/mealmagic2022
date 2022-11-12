@@ -1,13 +1,12 @@
 # mealmagic2022
-Project in C language that attempts to build a restaurant management system
-#include<stdio.h>			// Pre-processor directive (standard input output header file) 
-#include<time.h> 			// header file to add current time and date
-#include<stdlib.h> 			// header file to change color and clear screen after intervals when required
-#include <ctype.h>			// header file mainly used for testing and mapping characters
-#include <windows.h>		// header file mainly used for declarations for all of the functions 
-#include<string.h>			// header file mainly used for string operations
+#include<stdio.h>			
+#include<time.h> 			
+#include<stdlib.h> 			
+#include <ctype.h>			
+#include <windows.h>		 
+#include<string.h>			
  
-typedef struct{ 			// Structure for customer's details
+typedef struct{ 
 
 	char id[15]; 
 	char firstname[25];
@@ -20,26 +19,25 @@ typedef struct{ 			// Structure for customer's details
 	
 }customer;
 	
-	int choice1,choice2,choice3,i,again,num,total,tables; // global variable declaration
+	int choice1,choice2,choice3,i,again,num,total,tables; 
 	int x;
 	char yes_no,choice;	
 	
-	int search(customer st[],char id[], int itemcount); // function for search and displaying main screen 
+	int search(customer st[],char id[], int itemcount);  
 	void displayheading();
 	
 void titlepage(){ 				
-	system("color 6"); 			// changes the color of the text
+	system("color 6"); 			
 	printf("\t\t\t\t ********************************************************\n");
 	printf("\t\t\t\t |\t\tWelcome to The Meal-Magic\t\t|\n");
 	printf("\t\t\t\t |\tThe Ultimate Restaurant Management System\t|\n");
 	printf("\t\t\t\t *********************************************************\n");
 	printf("Programming Fundamentals-Project made by:\n\t Ayesha Hassan (22K-4326)\n\t Emanay Arshad (22K-4602)\n\t Muhammad Ali Ansari (22K-4135)\n\t Section: BSCS-1F\n\n"); 
-	
-	//For adding current date and time to the program 
-    time_t time1; 				// creating time1 variable of structure time_t
-    char* date_time; 			// char* = declaring a pointer to a character variable date_time 
-    time(&time1); 				// using time() function to initialize time1 variable 
-    date_time = ctime(&time1); // using another function ctime to display date and time in string format
+	 
+    time_t time1;
+    char* date_time; 
+    time(&time1); 
+    date_time = ctime(&time1);
     printf("Today's Date and Current Time: %s", date_time);
     
 	// displaying options for the customer
